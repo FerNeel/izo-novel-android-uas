@@ -15,26 +15,26 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.sata.izonovel.BiodataActivity;
 import com.sata.izonovel.DetailNovelActivity;
-import com.sata.izonovel.Model.ListNovelResponseModel;
+import com.sata.izonovel.Model.FavoriteNovelResponse;
 import com.sata.izonovel.R;
 import com.squareup.picasso.Picasso;
 import com.squareup.picasso.Target;
 
 import java.util.List;
 
-public class DaftarNovelAdapter extends RecyclerView.Adapter<DaftarNovelAdapter.AdapterHolder> {
+public class FavoritNovelAdapter extends RecyclerView.Adapter<FavoritNovelAdapter.AdapterHolder> {
     private Context context;
-    private List<ListNovelResponseModel.Documents> documentsList;
+    private List<FavoriteNovelResponse.Document> documentsList;
 
-    public DaftarNovelAdapter(Context context, List<ListNovelResponseModel.Documents> documentsList){
+    public FavoritNovelAdapter(Context context, List<FavoriteNovelResponse.Document> documentList){
         this.context = context;
-        this.documentsList = documentsList;
+        this.documentsList = documentList;
     }
 
 
     @NonNull
     @Override
-    public DaftarNovelAdapter.AdapterHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public FavoritNovelAdapter.AdapterHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(context).inflate(R.layout.adapter_novel, parent, false);
         AdapterHolder holder = new AdapterHolder(view);
 
@@ -43,8 +43,8 @@ public class DaftarNovelAdapter extends RecyclerView.Adapter<DaftarNovelAdapter.
     }
 
     @Override
-    public void onBindViewHolder(@NonNull DaftarNovelAdapter.AdapterHolder holder, int position) {
-        final ListNovelResponseModel.Documents documents = documentsList.get(position);
+    public void onBindViewHolder(@NonNull FavoritNovelAdapter.AdapterHolder holder, int position) {
+        final FavoriteNovelResponse.Document documents = documentsList.get(position);
 
         String judulNovel = documents.getJudul();
         String tahunDanPengarang = documents.getTahunTerbit() +" | "+ documents.getPengarang();
@@ -56,8 +56,6 @@ public class DaftarNovelAdapter extends RecyclerView.Adapter<DaftarNovelAdapter.
         holder.Sinopsis.setText(trimString(sinopsis));
         holder.Genre.setText(genre);
 
-        String gambar = documents.getGambar();
-        Picasso.get().load(gambar).into(holder.imgPoster);
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

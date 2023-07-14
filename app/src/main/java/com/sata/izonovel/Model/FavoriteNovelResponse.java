@@ -2,18 +2,28 @@ package com.sata.izonovel.Model;
 
 import java.util.List;
 
-public class ListNovelResponseModel {
+public class FavoriteNovelResponse {
 
-    public List<Documents> getDocuments() {
+    public List<Document> getDocuments() {
         return documents;
     }
 
-    public void setDocuments(List<Documents> documents) {
+    public void setDocuments(List<Document> documents) {
         this.documents = documents;
     }
 
-    private List<Documents> documents;
-    public static class Documents {
+    private List<Document> documents;
+    public static class Document {
+
+        private  String _id;
+        private  String genre;
+        private  String judul;
+        private  String penerbit;
+        private  String pengarang;
+        private  String sinopsis;
+        private  String tahunTerbit;
+        private  String isFavorit;
+
         public String get_id() {
             return _id;
         }
@@ -30,12 +40,12 @@ public class ListNovelResponseModel {
             this.genre = genre;
         }
 
-        public String getManusia() {
-            return manusia;
+        public String getJudul() {
+            return judul;
         }
 
-        public void setManusia(String manusia) {
-            this.manusia = manusia;
+        public void setJudul(String judul) {
+            this.judul = judul;
         }
 
         public String getPenerbit() {
@@ -70,31 +80,12 @@ public class ListNovelResponseModel {
             this.tahunTerbit = tahunTerbit;
         }
 
-        public String getJudul() {
-            return judul;
+        public String getIsFavorit() {
+            return isFavorit;
         }
 
-        public void setJudul(String judul) {
-            this.judul = judul;
+        public void setIsFavorit(String isFavorit) {
+            this.isFavorit = isFavorit;
         }
-
-        public String getGambar() {
-            return gambar;
-        }
-
-        public void setGambar(String gambar) {
-            this.gambar = gambar;
-        }
-
-        private  String _id;
-        private  String genre;
-        private String judul;
-        private  String manusia;
-        private  String penerbit;
-        private  String pengarang;
-        private  String sinopsis;
-        private  String tahunTerbit;
-        private String gambar;
-
     }
 }
