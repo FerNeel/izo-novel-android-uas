@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".DetailNovelActivity">
+    tools:context=".DetailNovelActivity"
+    android:background="@color/white">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -17,7 +18,7 @@
                 android:layout_width="match_parent"
                 android:orientation="horizontal"
                 android:layout_height="wrap_content"
-                android:background="@color/white">
+                android:background="@drawable/myrect">
 
                 <LinearLayout
                     android:layout_width="wrap_content"
@@ -47,7 +48,8 @@
                     android:textSize="16sp"
                     android:textColor="@color/black"
                     android:textStyle="bold"
-                    android:text="Judul Novel" />
+                    android:text="Judul Novel"
+                    />
             </LinearLayout>
 
             <LinearLayout
@@ -66,15 +68,16 @@
                     android:layout_weight="1"
                     android:text="Pengarang"
                     android:textStyle="bold"
-                    android:layout_height="wrap_content"/>
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"/>
                 <TextView
-                    android:id="@+id/pengarang"
                     android:layout_width="match_parent"
                     android:layout_weight="1"
                     android:textAlignment="textEnd"
                     android:text="Nama Pengarang"
                     android:textStyle="bold"
-                    android:layout_height="wrap_content"/>
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"/>
             </LinearLayout>
 
             <LinearLayout
@@ -92,15 +95,16 @@
                     android:layout_weight="1"
                     android:text="Penerbit"
                     android:textStyle="bold"
-                    android:layout_height="wrap_content"/>
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"/>
                 <TextView
-                    android:id="@+id/penerbit"
                     android:layout_width="match_parent"
                     android:layout_weight="1"
                     android:textAlignment="textEnd"
                     android:text="Nama Penerbit"
                     android:textStyle="bold"
-                    android:layout_height="wrap_content"/>
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"/>
             </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"
@@ -117,15 +121,16 @@
                     android:layout_weight="1"
                     android:text="Tahun Terbit"
                     android:textStyle="bold"
-                    android:layout_height="wrap_content"/>
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"/>
                 <TextView
-                    android:id="@+id/tahun"
                     android:layout_width="match_parent"
                     android:layout_weight="1"
                     android:textAlignment="textEnd"
                     android:text="YYYY"
                     android:textStyle="bold"
-                    android:layout_height="wrap_content"/>
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"/>
             </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"
@@ -142,15 +147,16 @@
                     android:layout_weight="1"
                     android:text="Genre Novel"
                     android:textStyle="bold"
-                    android:layout_height="wrap_content"/>
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"/>
                 <TextView
-                    android:id="@+id/genre"
                     android:layout_width="match_parent"
                     android:layout_weight="1"
                     android:textAlignment="textEnd"
                     android:text="Genre Novel"
                     android:textStyle="bold"
-                    android:layout_height="wrap_content"/>
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"/>
             </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"
@@ -181,7 +187,8 @@
                         android:layout_width="match_parent"
                         android:textStyle="italic"
                         android:text="65k Dibaca"
-                        android:layout_height="wrap_content"/>
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"/>
 
                 </LinearLayout>
 
@@ -201,7 +208,8 @@
                         android:layout_width="match_parent"
                         android:text="65k Disukai"
                         android:textStyle="italic"
-                        android:layout_height="wrap_content"/>
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"/>
 
                 </LinearLayout>
 
@@ -219,7 +227,8 @@
                         android:layout_width="match_parent"
                         android:text="20k Ulasan"
                         android:textStyle="italic"
-                        android:layout_height="wrap_content"/>
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"/>
 
                 </LinearLayout>
             </LinearLayout>
@@ -237,7 +246,8 @@
                     android:textStyle="italic"
                     android:layout_marginTop="5dp"
                     android:layout_marginLeft="15dp"
-                    android:text="Ini Sinopsis....!!"/>
+                    android:text="Ini Sinopsis....!!"
+                    android:textColor="@color/black"/>
 
                 <TextView
                     android:id="@+id/tvSinopsis"
@@ -247,8 +257,10 @@
                     android:layout_marginTop="10dp"
                     android:layout_marginRight="15dp"
                     android:justificationMode="inter_word"
+                    android:textColor="@color/black"
                     android:text="Anda memiliki bakat mentah. Atau Anda yang diunggulkan. Tapi apakah kamu punya hati? Apakah Anda memiliki apa yang diperlukan? Mari kita lihat Anda terbuat dari apa. Pertarungan sesungguhnya dimulai sekarang!"
-                    android:textStyle="italic" />
+                    android:textStyle="italic"
+                   />
             </LinearLayout>
 
             <Button
