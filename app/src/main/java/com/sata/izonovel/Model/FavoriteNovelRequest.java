@@ -41,11 +41,11 @@ public class FavoriteNovelRequest {
     }
 
     public static class Filter{
-        public String getisFavorit() {
+        public String getIsFavorite() {
             return isFavorit;
         }
 
-        public void setisFavorit(String isFavorit) {
+        public void setIsFavorite(String isFavorit) {
             this.isFavorit = isFavorit;
         }
 

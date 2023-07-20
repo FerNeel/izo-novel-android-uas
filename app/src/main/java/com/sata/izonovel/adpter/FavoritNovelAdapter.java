@@ -33,10 +33,11 @@ public class FavoritNovelAdapter extends RecyclerView.Adapter<FavoritNovelAdapte
         this.context = context;
         this.documentsList = documentList;
     }
-    public void setFilteredList(List<FavoriteNovelResponse.Documents> filteredList) {
-        documentsList = filteredList;
+    public void setFilteredList(List<FavoriteNovelResponse.Documents> filter) {
+        documentsList = filter;
         notifyDataSetChanged();
     }
+
 
 
     @NonNull

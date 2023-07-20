@@ -88,6 +88,7 @@ import java.util.List;
             private String tahunTerbit;
             private String isFavorite;
 
+
             public String getGambar() {
                 return gambar;
             }
