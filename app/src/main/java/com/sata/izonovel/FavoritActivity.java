@@ -4,15 +4,14 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.annotation.SuppressLint;
 import android.app.ProgressDialog;
 import android.os.Bundle;
 import android.widget.EditText;
 
 import com.sata.izonovel.Model.FavoriteNovelRequest;
 import com.sata.izonovel.Model.FavoriteNovelResponse;
-import com.sata.izonovel.Model.ListNovelRequestModel;
 import com.sata.izonovel.Model.ListNovelResponseModel;
-import com.sata.izonovel.Model.LoginRequestModel;
 import com.sata.izonovel.Retrofit.APIService;
 import com.sata.izonovel.adpter.DaftarNovelAdapter;
 import com.sata.izonovel.adpter.FavoritNovelAdapter;
@@ -23,6 +22,7 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
+
 public class FavoritActivity extends AppCompatActivity {
     EditText fav;
     private RecyclerView recyclerView;
@@ -30,14 +30,16 @@ public class FavoritActivity extends AppCompatActivity {
 
     private ProgressDialog progressDialog;
 
+
+    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_daftar_novel);
+        setContentView(R.layout.activity_favorite);
 
-        setTitle(R.string.title_daftar_novel);
+        setTitle("Novel Favorit");
 
-        recyclerView = findViewById(R.id.reycle_daftar_novel);
+        recyclerView = findViewById(R.id.reycle_favorite_novel);
 
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         recyclerView.setHasFixedSize(true);
@@ -52,10 +54,6 @@ public class FavoritActivity extends AppCompatActivity {
         favoriteNovelRequest.setDatabase("izonovel");
         favoriteNovelRequest.setDataSource("Cluster0");
 
-        FavoriteNovelRequest.Filter favFilter = new FavoriteNovelRequest.Filter();
-        favFilter.setisFavorit(fav.getText().toString());
-
-        favoriteNovelRequest.setFilter(favFilter);
 
 
         progressDialog = new ProgressDialog(this);
@@ -65,9 +63,9 @@ public class FavoritActivity extends AppCompatActivity {
         APIService.endpoint().FavNovel(favoriteNovelRequest).enqueue(new Callback<FavoriteNovelResponse>() {
             @Override
             public void onResponse(Call<FavoriteNovelResponse> call, Response<FavoriteNovelResponse> response) {
-                List<FavoriteNovelResponse.Document> document = response.body().getDocuments();
+                List<FavoriteNovelResponse.Documents> documents = response.body().getDocuments();
 
-                favNovelAdapter = new FavoritNovelAdapter(FavoritActivity.this, document);
+                favNovelAdapter = new FavoritNovelAdapter(FavoritActivity.this, documents);
                 recyclerView.setAdapter(favNovelAdapter);
 
 

@@ -25,13 +25,15 @@
                 android:layout_height="wrap_content"
                 android:textSize="16dp"
                 android:textStyle="bold"
-                android:text="Menanti Hari Berganti"/>
+                android:text="Menanti Hari Berganti"
+                android:textColor="@color/black"/>
             <TextView
                 android:id="@+id/tvTahunDanPengarang"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textSize="11dp"
-                android:text="2020-10-01  | Titi sandrina"/>
+                android:text="2020-10-01  | Titi sandrina"
+                android:textColor="@color/black"/>
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -53,7 +55,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="2dp"
-                        android:text="Romance"/>
+                        android:text="Romance"
+                        android:textColor="@color/black"/>
                 </LinearLayout>
 
                 <LinearLayout
@@ -70,7 +73,8 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Chapter" />
+                        android:text="Chapter"
+                        android:textColor="@color/black"/>
                 </LinearLayout>
 
             </LinearLayout>
@@ -81,6 +85,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:justificationMode="inter_word"
+                android:textColor="@color/black"
                 android:text="deskripsi sinopsis disini  deskripsi deskripsi sinopsis disini sinopsis disini "/>
 
 <!--            <LinearLayout-->

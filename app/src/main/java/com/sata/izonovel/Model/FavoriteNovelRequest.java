@@ -1,4 +1,7 @@
-package com.sata.izonovel.Model;public class FavoriteNovelRequest {
+package com.sata.izonovel.Model;
+
+
+public class FavoriteNovelRequest {
 
     private String collection;
     private String database;
